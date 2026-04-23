@@ -43,26 +43,26 @@ export default function PathwaysSection() {
         <p className="font-monoBrand text-sm font-bold uppercase tracking-[0.24em] text-nmRed">
           Choose your pathway
         </p>
+
         <h3 className="font-monoBrand mt-3 text-3xl font-bold uppercase text-white sm:text-5xl">
           Training pathways for different stages.
         </h3>
+
         <p className="font-sansBody mt-5 max-w-3xl text-base leading-7 text-white/75 sm:text-lg">
           Noise Makerz is built to support learners at different life stages,
           from first creative exposure through to progression and retraining.
         </p>
       </div>
 
-      <div className="relative grid gap-5 lg:grid-cols-3">
-        {pathways.map((pathway, index) => (
+      <div className="relative grid gap-5 lg:grid-cols-3 items-stretch">
+        {pathways.map((pathway) => (
           <div
             key={pathway.title}
-            className={`group rounded-[28px] border border-white/10 bg-white/[0.04] p-6 transition duration-300 hover:-translate-y-2 hover:border-nmGreen/40 hover:bg-white/[0.06] hover:shadow-glow ${
-              index === 1 ? "lg:mt-8" : ""
-            }`}
+            className="group flex h-full flex-col rounded-[28px] border border-white/10 bg-white/[0.04] p-6 transition duration-300 hover:-translate-y-2 hover:border-nmGreen/40 hover:bg-white/[0.06] hover:shadow-glow"
           >
             <div className="h-1 w-14 rounded-full bg-nmGreen transition duration-300 group-hover:w-20" />
 
-            <div className="mt-5 inline-flex rounded-full border border-nmGreen/20 bg-nmGreen/10 px-3 py-2 transition duration-300 group-hover:scale-105 group-hover:border-nmGreen/40">
+            <div className="mt-5 inline-flex self-start rounded-full border border-nmGreen/20 bg-nmGreen/10 px-3 py-2 transition duration-300 group-hover:scale-105 group-hover:border-nmGreen/40">
               <span className="font-monoBrand text-xs font-bold uppercase tracking-[0.18em] text-nmGreen">
                 {pathway.age}
               </span>
@@ -87,14 +87,16 @@ export default function PathwaysSection() {
               ))}
             </div>
 
-            <a
-              href={applyLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-monoBrand mt-6 inline-flex rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white transition duration-300 hover:scale-[1.03] hover:bg-white/10"
-            >
-              Register Interest
-            </a>
+            <div className="mt-auto pt-6">
+              <a
+                href={applyLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-monoBrand inline-flex rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white transition duration-300 hover:scale-[1.03] hover:bg-white/10"
+              >
+                Register Interest
+              </a>
+            </div>
           </div>
         ))}
       </div>
