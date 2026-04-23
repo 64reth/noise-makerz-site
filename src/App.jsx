@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TrustStrip from "./components/TrustStrip";
-import Highlights from "./components/Highlights";
+import PathwaysSection from "./components/PathwaysSection";
 import AboutSection from "./components/AboutSection";
 import SkillsGrid from "./components/SkillsGrid";
 import BenefitsRow from "./components/BenefitsRow";
@@ -18,7 +18,7 @@ export default function App() {
       <Navbar />
       <Hero />
       <TrustStrip />
-      <Highlights />
+      <PathwaysSection />
       <AboutSection />
       <SkillsGrid />
       <BenefitsRow />
